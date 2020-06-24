@@ -1,0 +1,7 @@
+n=input( )
+m=n.replace('0','')
+k=m[::-1]
+if(m==k):
+    print('yes')
+else:
+    print('no')
