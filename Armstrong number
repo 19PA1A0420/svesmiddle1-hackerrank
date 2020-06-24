@@ -1,0 +1,21 @@
+a=int(input())
+b=int(input())
+arm=0
+l=[]
+arm=0
+for i in range(a,b+1):
+    temp=i
+    while i>0:
+        c=i%10
+        l.append(c)
+        i=i//10
+    d=len(l)
+    s=0
+    for i in l:
+        s=s+(i**d)
+    if s==temp:
+        arm=arm+s
+    else:
+        arm=arm+0
+    l.clear()
+print(arm)
