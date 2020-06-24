@@ -1,0 +1,30 @@
+def isPalindrome(line):
+    if line == line[::-1]:
+        return True
+    return False
+
+n=int(input())
+while n!=0:
+    line = input()
+    l = len(line)
+    flag = 0
+    i = 0
+    if isPalindrome(line):
+        print('-1')
+    else:
+        for i in range(0,l//2+1):
+            j = l-i-1
+            if line[i] != line[j]:
+                if isPalindrome(line[0:i]+line[i+1:l]):
+                    flag = 1
+                    break;
+                elif isPalindrome(line[-i:0]+line[-i-1:-l]):
+                    flag = 2
+                    break
+        if flag==1:
+            print(i)
+        elif flag==2:
+            print(-i+l-1)
+        else:
+            print('-1')
+    n=n-1
