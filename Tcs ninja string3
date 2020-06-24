@@ -1,0 +1,12 @@
+a=str(input())
+b=""
+i=0
+while i<len(a)-1:
+    if a[i]!=a[i+1]:
+        b=b+a[i]
+    i=i+1
+if [-1]!=a[-2]:
+    b=b+a[-1]
+else:
+    b=b+a[i]
+print(b[::-1])
