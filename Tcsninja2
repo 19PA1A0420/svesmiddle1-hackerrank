@@ -1,0 +1,13 @@
+
+a=input( )
+b=input( )
+c=input( )
+l=['a','e','i','o','u','A','E','I','O','U']
+for i in a:
+    if i in l:
+        a=a.replace(i,"$")
+for i in b:
+    if i not in l:
+        b=b.replace(i,"#")
+c=c.upper( )
+print(a+b+c)
