@@ -1,0 +1,14 @@
+
+a=input()
+b=''
+j=0
+c=0
+for i in range(0,len(a)):
+    if a[j]==a[i] :
+        c=c+1
+    else:
+        b=b+a[j]+str(c)
+        c=1
+        j=i
+b=b+a[j]+str(c)
+print(b)
